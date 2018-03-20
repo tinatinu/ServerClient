@@ -1,0 +1,149 @@
+mca@mca-desktop:~$ cd Desktop
+mca@mca-desktop:~/Desktop$ cd thazniyalab
+mca@mca-desktop:~/Desktop/thazniyalab$ cd syslab
+mca@mca-desktop:~/Desktop/thazniyalab/syslab$ cd clientserver
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git init
+Initialized empty Git repository in /home/mca/Desktop/thazniyalab/syslab/clientserver/.git/
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git add .
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   GossipClient.java
+
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git commit -m "client first part"
+[master (root-commit) 55cf13f] client first part
+ 1 file changed, 11 insertions(+)
+ create mode 100644 GossipClient.java
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git add .mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git add .
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git commit -m "client second part"
+[master b045d22] client second part
+ 1 file changed, 10 insertions(+)
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git add .
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git statusOn branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   GossipClient.java
+
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git commit -m "client completed"
+[master 2c50828] client completed
+ 1 file changed, 12 insertions(+)
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git log
+commit 2c508284feda385280b527b4a431c0f4eb7e7c67
+Author: Thazniya <thasniyakader@gmail.com>
+Date:   Tue Mar 20 14:14:41 2018 +0530
+
+    client completed
+
+commit b045d223f89809e00093bf3bd1e5f56955015aa6
+Author: Thazniya <thasniyakader@gmail.com>
+Date:   Tue Mar 20 14:13:57 2018 +0530
+
+    client second part
+
+commit 55cf13fffe53a38374d9bd081c856cb187742b21
+Author: Thazniya <thasniyakader@gmail.com>
+Date:   Tue Mar 20 14:13:21 2018 +0530
+
+    client first part
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ javac GossipClient.java
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git add .
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   GossipClient.class
+
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git commit -m "class file added"
+[master 38fb761] class file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 GossipClient.class
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git remote add cliser https://github.com/tinatinu/ServerClient.git
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git push cliser master
+Username for 'https://github.com': Thazniyakader
+Password for 'https://Thazniyakader@github.com': 
+To https://github.com/tinatinu/ServerClient.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/tinatinu/ServerClient.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ crontab -l
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+20 11 * * * tar -czvf extract.zip /home/mca/Desktop/thazniyalab/syslab/crontabprg/sample
+ 
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git pull cliser master
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/tinatinu/ServerClient
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> cliser/master
+
+Error reading /home/mca/.nano_history: Permission denied
+
+Press Enter to continue starting nano.
+
+Merge made by the 'recursive' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git push cliser master
+Username for 'https://github.com': Thazniyakader
+Password for 'https://Thazniyakader@github.com': 
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (14/14), 2.42 KiB | 0 bytes/s, done.
+Total 14 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/tinatinu/ServerClient.git
+   01bc3c6..519f27b  master -> master
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ git pull cliser master
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 14 (delta 3), reused 14 (delta 3), pack-reused 0
+Unpacking objects: 100% (14/14), done.
+From https://github.com/tinatinu/ServerClient
+ * branch            master     -> FETCH_HEAD
+   519f27b..f805b4c  master     -> cliser/master
+Updating 519f27b..f805b4c
+Fast-forward
+ ServerTcp.class | Bin 0 -> 1328 bytes
+ ServerTcp.java  |  31 +++++++++++++++++++++++++++++++
+ 2 files changed, 31 insertions(+)
+ create mode 100644 ServerTcp.class
+ create mode 100644 ServerTcp.java
+mca@mca-desktop:~/Desktop/thazniyalab/syslab/clientserver$ 
+
