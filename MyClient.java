@@ -10,3 +10,5 @@ import java.net.*;
     while(!str.equals("stop")){ 
     str=br.readLine();  
     dout.writeUTF(str); 
+    dout.flush();  
+    str2=din.readUTF();  
