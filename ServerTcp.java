@@ -10,7 +10,15 @@ class MyServer
         DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));  
       
-        String str="",str2="";    
+        String str="",str2=""; 
+        while(!str.equals("stop"))
+        {  
+            str=din.readUTF();  
+            System.out.println("client says: "+str);  
+            str2=br.readLine();  
+            dout.writeUTF(str2);  
+            dout.flush();  
+        }     
 
 
 
