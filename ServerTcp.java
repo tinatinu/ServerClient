@@ -1,4 +1,16 @@
-import java.io.*;
+import java.net.*;  
+import java.io.*;  
+class MyServer
+{  
+    public static void main(String args[])throws Exception
+    {  
+        ServerSocket ss=new ServerSocket(3333);  
+
+
+
+
+
+/*import java.io.*;
 import java.net.*;
 public class ServerTcp
 {
@@ -28,4 +40,4 @@ public class ServerTcp
         pwrite.flush();
       }               
     }                    
-}                      
+}*/                      
