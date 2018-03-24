@@ -19,7 +19,11 @@ class MyServer
             dout.writeUTF(str2);  
             dout.flush();  
         }     
-
+        din.close();  
+        s.close();  
+        ss.close();  
+    }
+}  
 
 
 
