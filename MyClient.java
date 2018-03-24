@@ -14,3 +14,6 @@ import java.net.*;
     str2=din.readUTF();  
     System.out.println("Server says: "+str2);  
     }  
+    dout.close();  
+    s.close();  
+    }}  
