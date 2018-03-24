@@ -12,7 +12,7 @@ import java.net.*;
     dout.writeUTF(str); 
     dout.flush();  
     str2=din.readUTF();  
-    System.out.println("Ser ver says: "+str2);  
+    System.out.println("Server says: "+str2);  
     }  
     dout.close();  
     s.close();  
